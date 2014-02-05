@@ -10,6 +10,7 @@ ln -s ~/.home/.vimrc ~/.vimrc
 
 mkdir -p ~/.vim/colors/ && ln -s ~/.home/vimColors/peaksea.vim ~/.vim/colors/
 
-FILE=~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
-mv "$FILE" "$FILE.orig"
-ln -s ~/.home/Preferences.sublime-settings "$FILE"
+##Does not work out of the box: Should not assume files and directory exist: TODO: Fix.
+#FILE=~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
+#mv "$FILE" "$FILE.orig"
+#ln -s ~/.home/Preferences.sublime-settings "$FILE"
