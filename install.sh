@@ -7,6 +7,7 @@ ln -s ~/.home/.bashrc ~/.bashrc
 ln -s ~/.home/.inputrc ~/.inputrc
 ln -s ~/.home/.screenrc ~/.screenrc
 ln -s ~/.home/.vimrc ~/.vimrc
+touch ~/.hushlogin
 
 ##Does not work out of the box: Should not assume files and directory exist: TODO: Fix.
 #FILE=~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings
