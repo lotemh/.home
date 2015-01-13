@@ -1,6 +1,15 @@
 
 unset MAILCHECK
 
+# History setup:
+HISTCONTROL=ignoredups:ignorespace # don't put duplicate lines in the history. See bash(1) for more options
+shopt -s histappend # append to the history file, don't overwrite it
+HISTSIZE=4000 # Number of commands in history file
+HISTFILESIZE=4000 # Number of lines in history file
+
+# check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
 # Git branch in prompt.
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -29,7 +38,7 @@ alias laa='`which ls` -la | `which grep` " \."' #only hidden
 alias ..='cd .. && ll'
 alias llnsl='ll | grep -v "@ \->"'
 alias llt='tree -hFvC --noreport --filelimit 40 --dirsfirst -L 2'
-alias vimencrypt='vim -u ~/.home/vimencrypt -x'
+alias vimencrypt='vim -u ~/.home/conf/vimencrypt -x'
 alias ducks='du -cksh * | sort -rn|head -11' # Lists folders and files sizes in the current folder
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 #ls:
