@@ -8,7 +8,6 @@ export NODE_PATH="/usr/local/bin/node:/usr/local/lib/node_modules"
 export NODE_HOME='/usr/local/bin'
 export PATH=~/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/opt/ruby/bin:/usr/local/share/npm/bin:$PATH
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/
-export PS1='\t:\u@\h:\w$(parse_git_branch)$ ' #TODO: check if to make linux as well #TODO: this is exported to root on su, while the funciton isn't
 export LSCOLORS='gxfxcxdxbxegedabagaced'
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
@@ -29,6 +28,7 @@ alias wifi='osx-wifi-cli'
 alias mylocalip='ifconfig | grep -Eo "inet (addr:)?([0-9]*\.){3}[0-9]*" | grep -Eo "([0-9]*\.){3}[0-9]*" | grep -v "127."'
 alias eject='drutil eject' # remove when cds will finally die
 alias updatebrewcask='brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup'
+alias lock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 osxsleep() {
 	sleep `echo "scale=4; 60 * ${1:-0}" | bc` && pmset sleepnow
