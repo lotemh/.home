@@ -14,3 +14,8 @@ set echo-control-characters off
 set completion-ignore-case On
 
 set bell-style off
+
+# ctrl + right
+"\e[1;5C": forward-word   
+# ctrl + left 
+"\e[1;5D": backward-word  
