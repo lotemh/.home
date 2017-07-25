@@ -1,0 +1,10 @@
+[alias]
+	co = checkout
+	st = status
+	logme = log --author=lotemh	
+	com = commit -m
+[user]
+	email = lotem.h@elasticmedia.io
+	name = lotemh
+[core]
+	autocrlf = true
