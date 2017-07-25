@@ -8,4 +8,9 @@ do
   test -f $FILE && . $FILE
 done
 
-#echo "sleep 0.1" >> ~/.bashrc
+# sets the history length to unlimited size
+export HISTFILESIZE=
+export HISTSIZE=
+
+# immediately save commands to history
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
